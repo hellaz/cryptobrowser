@@ -5,7 +5,7 @@ function detectBrowser(){var n=navigator.userAgent;if(n.indexOf('Edge')>-1){retu
 function hideTip(){downloadTip.style.display='none';}
 if(browserIcon){browserIcon.classList.add('browser-icon_'+browserName);}
 if(downloadTip){downloadTip.classList.add('download-tip_'+browserName);}
-function showPopup(popup){document.getElementById(popup).classList.add('active');document.querySelector('.page').classList.add('page_blocked');if(popup==='termsPopup'){document.querySelector('#termsPopup iframe').setAttribute('src','https://translate.google.com/translate?sl=en&tl=el&u=https://cryptobrowser.site/terms/?iframe=1');}}
+function showPopup(popup){document.getElementById(popup).classList.add('active');document.querySelector('.page').classList.add('page_blocked');if(popup==='termsPopup'){document.querySelector('#termsPopup iframe').setAttribute('src','https://cryptobrowser.site/terms/?iframe=1');}}
 function hidePopup(){var activePopup=document.querySelector('.popup.active');if(activePopup){activePopup.classList.remove('active');document.querySelector('.page').classList.remove('page_blocked');}}
 document.addEventListener('keydown',function(e){if(e.keyCode==27){hideTip();hidePopup();}});document.addEventListener('click',function(e){if(e.target.classList.contains('download-tip')){hideTip();}
 if(e.target.classList.contains('popup')&&!e.target.classList.contains('popup_action_required')||e.target.classList.contains('popup__cancel')){hidePopup();}});
